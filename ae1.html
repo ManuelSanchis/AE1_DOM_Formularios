@@ -48,7 +48,6 @@
             trDni.appendChild(tdDni); // Introduce el tdDni en trDni
             trDni.appendChild(tdDniInput); // Introduce el tdDniInput en trDni
 
-        
             // NOMBRE
             let trNom = document.createElement("tr");
 
@@ -75,7 +74,7 @@
             let trApe = document.createElement("tr");
 
             let tdApe = document.createElement("td");
-            tdApe.id = "tApe";
+            tdApe.id = "tdApe";
 
             let contApe = document.createTextNode("Apellidos:")
 
@@ -93,13 +92,98 @@
             trApe.appendChild(tdApe);
             trApe.appendChild(tdApeInput);
 
+            // DIRECCION
+            let trDir = document.createElement("tr");
+
+            let tdDir = document.createElement("td");
+            tdDir.id = "tdDir";
+
+            let contDir = document.createTextNode("Dirección:")
+
+            tdDir.appendChild(contDir);
+
+            let tdDirInput = document.createElement("td");
+            tdDirInput.id = "tdDirInput";
+
+            let inputDir = document.createElement("input");
+            inputDir.id = "inputDir";
+            inputDir.type = "text";
+
+            tdDirInput.appendChild(inputDir);
+
+            trDir.appendChild(tdDir);
+            trDir.appendChild(tdDirInput);
+
+            // TELEFONO
+            let trTel = document.createElement("tr");
+
+            let tdTel = document.createElement("td");
+            tdTel.id = "tdTel";
+
+            let contTel = document.createTextNode("Teléfono:")
+
+            tdTel.appendChild(contTel);
+
+            let tdTelInput = document.createElement("td");
+            tdTelInput.id = "tdTelInput";
+
+            let inputTel = document.createElement("input");
+            inputTel.id = "inputTel";
+            inputTel.type = "text";
+
+            tdTelInput.appendChild(inputTel);
+
+            trTel.appendChild(tdTel);
+            trTel.appendChild(tdTelInput);
+
             table.appendChild(trDni); // Introduce trDni en table
             table.appendChild(trNom); // Introduce trNom en table
             table.appendChild(trApe); // Introduce trApe en table
+            table.appendChild(trDir); // Introduce trDir en table
+            table.appendChild(trTel); // Introduce trTel en table
             
             form.appendChild(table); // Introduce table en form
 
             div1.appendChild(form); // Introduce form en div1
+
+            /*
+            El HTML que obtendríamos al ejecutar este código JS sería este:
+
+            <form id="form1" action="urlServidor" method="get">
+                <table>
+                    <tr>
+                        <td id="tdDni">DNI:</td>
+                        <td id="tdDniInput">
+                            <input id="inputDni" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="tdNom">Nombre:</td>
+                        <td id="tdNomInput">
+                            <input id="inputNom" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="tdApe">Apellidos:</td>
+                        <td id="tdApeInput">
+                            <input id="inputApe" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="tdDir">Dirección:</td>
+                        <td id="tdDirInput">
+                            <input id="inputDir" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="tdTel">Teléfono:</td>
+                        <td id="tdTelInput">
+                            <input id="inputTel" type="text">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            */
 
         }
 

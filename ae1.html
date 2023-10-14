@@ -3,14 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AE-1</title>
+    <title>Document</title>
+
     <script>
 
+        function cargar() {
 
+            // PRUEBA
+            let parrafo = document.createElement("p");
+
+            let contenido = document.createTextNode("Probando");
+
+            parrafo.appendChild(contenido);
+
+            div1.appendChild(parrafo);
+
+            // Crea el formulario
+            let form = document.createElement("form");
+            form.id = "form1";
+            form.action = "urlServidor";
+            form.method = "get";
+
+            // Crea la tabla
+            let table = document.createElement("table");
+
+            // DNI
+            let trDni = document.createElement("tr"); // Crea el trDni
+            
+            let tdDni = document.createElement("td"); // Crea el tdDni
+            tdDni.id = "tdDni";
+            
+            let contDni = document.createTextNode("DNI:") // Crea el contenido de tdDni
+            tdDni.appendChild(contDni); // Introduce el contDni en tdDni
+
+            let tdDniInput = document.createElement("td"); // Crea el tdDniInput
+            tdDniInput.id = "tdDniInput";
+
+            let inputDni = document.createElement("input"); // Crea el inputDni
+            inputDni.id = "inputDni";
+            inputDni.type = "text";
+
+            tdDniInput.appendChild(inputDni); // Introduce el inputDni en tdDniInput 
+
+            trDni.appendChild(tdDni); // Introduce el tdDni en trDni
+            trDni.appendChild(tdDniInput); // Introduce el tdDniInput en trDni
+
+        
+            // NOMBRE
+            let trNom = document.createElement("tr");
+
+            let tdNom = document.createElement("td");
+            tdNom.id = "tdNom";
+
+            let contNom = document.createTextNode("Nombre:")
+
+            tdNom.appendChild(contNom);
+
+            let tdNomInput = document.createElement("td");
+            tdNomInput.id = "tdNomInput";
+
+            let inputNom = document.createElement("input");
+            inputNom.id = "inputNom";
+            inputNom.type = "text";
+
+            tdNomInput.appendChild(inputNom);
+
+            trNom.appendChild(tdNom);
+            trNom.appendChild(tdNomInput);
+
+            // APELLIDOS
+            let trApe = document.createElement("tr");
+
+            let tdApe = document.createElement("td");
+            tdApe.id = "tApe";
+
+            let contApe = document.createTextNode("Apellidos:")
+
+            tdApe.appendChild(contApe);
+
+            let tdApeInput = document.createElement("td");
+            tdApeInput.id = "tdApeInput";
+
+            let inputApe = document.createElement("input");
+            inputApe.id = "inputApe";
+            inputApe.type = "text";
+
+            tdApeInput.appendChild(inputApe);
+
+            trApe.appendChild(tdApe);
+            trApe.appendChild(tdApeInput);
+
+            table.appendChild(trDni); // Introduce trDni en table
+            table.appendChild(trNom); // Introduce trNom en table
+            table.appendChild(trApe); // Introduce trApe en table
+            
+            form.appendChild(table); // Introduce table en form
+
+            div1.appendChild(form); // Introduce form en div1
+
+        }
+
+        /*
+        function cargar() {
+
+            let contenedor = document.createElement("div");
+            contenedor.id = "div1";
+
+            document.body.appendChild(contenedor);
+
+        }
+        */
 
     </script>
+
 </head>
-<body>
-    <div id="contenedor"></div>
+
+<body onload="cargar()">
+
+    <div id="div1"></div>
+
 </body>
 </html>

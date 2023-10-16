@@ -28,25 +28,27 @@
             let table = document.createElement("table");
 
             // DNI
-            let trDni = document.createElement("tr"); // Crea el trDni
+            let trDni = document.createElement("tr"); // Crea el elemento trDni
             
-            let tdDni = document.createElement("td"); // Crea el tdDni
+            let tdDni = document.createElement("td"); // Crea el elemento tdDni
             tdDni.id = "tdDni";
             
-            let contDni = document.createTextNode("DNI:") // Crea el contenido de tdDni
-            tdDni.appendChild(contDni); // Introduce el contDni en tdDni
+            let contDni = document.createTextNode("DNI:") // Crea el contenido del elemento tdDni
 
-            let tdDniInput = document.createElement("td"); // Crea el tdDniInput
+            tdDni.appendChild(contDni); // Introduce el elemento contDni en tdDni
+
+            let tdDniInput = document.createElement("td"); // Crea el elemento tdDniInput
             tdDniInput.id = "tdDniInput";
 
-            let inputDni = document.createElement("input"); // Crea el inputDni
+            let inputDni = document.createElement("input"); // Crea el elemento inputDni
             inputDni.id = "inputDni";
             inputDni.type = "text";
+            inputDni.name = "dni";
 
-            tdDniInput.appendChild(inputDni); // Introduce el inputDni en tdDniInput 
+            tdDniInput.appendChild(inputDni); // Introduce el elemento inputDni en tdDniInput 
 
-            trDni.appendChild(tdDni); // Introduce el tdDni en trDni
-            trDni.appendChild(tdDniInput); // Introduce el tdDniInput en trDni
+            trDni.appendChild(tdDni); // Introduce el elemento tdDni en trDni
+            trDni.appendChild(tdDniInput); // Introduce el elemento tdDniInput en trDni
 
             // NOMBRE
             let trNom = document.createElement("tr");
@@ -64,6 +66,7 @@
             let inputNom = document.createElement("input");
             inputNom.id = "inputNom";
             inputNom.type = "text";
+            inputNom.name = "nombre";
 
             tdNomInput.appendChild(inputNom);
 
@@ -86,6 +89,7 @@
             let inputApe = document.createElement("input");
             inputApe.id = "inputApe";
             inputApe.type = "text";
+            inputApe.name = "apellidos";
 
             tdApeInput.appendChild(inputApe);
 
@@ -108,6 +112,7 @@
             let inputDir = document.createElement("input");
             inputDir.id = "inputDir";
             inputDir.type = "text";
+            inputDir.name = "direccion";
 
             tdDirInput.appendChild(inputDir);
 
@@ -130,21 +135,49 @@
             let inputTel = document.createElement("input");
             inputTel.id = "inputTel";
             inputTel.type = "text";
+            inputTel.name = "telefono";
 
             tdTelInput.appendChild(inputTel);
 
             trTel.appendChild(tdTel);
             trTel.appendChild(tdTelInput);
 
-            table.appendChild(trDni); // Introduce trDni en table
-            table.appendChild(trNom); // Introduce trNom en table
-            table.appendChild(trApe); // Introduce trApe en table
-            table.appendChild(trDir); // Introduce trDir en table
-            table.appendChild(trTel); // Introduce trTel en table
-            
-            form.appendChild(table); // Introduce table en form
+            // TEXT AREA
+            let trTex = document.createElement("tr"); // Crea el elemento trTex
 
-            div1.appendChild(form); // Introduce form en div1
+            let tdConTex = document.createElement("td"); // Crea el elemento tdConTex
+            tdConTex.id = "tdTexCon";
+
+            let conTex = document.createTextNode("Text Area:") // Crea el contenido del elemento tdConTex
+
+            tdConTex.appendChild(conTex); // Introduce el elemento conTex en tdConTex
+
+            let tdTexAre = document.createElement("td"); // Crea el elemento tdTexAre
+            tdTexAre.id = "tdTexAre";
+
+            let texAre = document.createElement("textarea"); // Crea el elemento texAre
+            texAre.id = "texAre";
+            texAre.name = "textArea";
+
+            tdTexAre.appendChild(texAre); // Introduce el elemento texAre en tdTexAre
+
+            trTex.appendChild(tdConTex); // Introduce el elemento tdConTex en trTex
+            trTex.appendChild(tdTexAre); // Introduce el elemento tdTexAre en trTex
+
+            table.appendChild(trDni); // Introduce el elemento trDni en table
+            table.appendChild(trNom); // Introduce el elemento trNom en table
+            table.appendChild(trApe); // Introduce el elemento trApe en table
+            table.appendChild(trDir); // Introduce el elemento trDir en table
+            table.appendChild(trTel); // Introduce el elemento trTel en table
+            // Aquí van los radio button
+            // Aquí van los checkbox
+            // Aquí van las imágenes
+            // Aquí va el select
+            table.appendChild(trTex); // Introduce el elemento trTex en table
+            
+            form.appendChild(table); // Introduce el elemento table en form
+
+            div1.appendChild(form); // Introduce el elemento form en div1
 
             /*
             El HTML que obtendríamos al ejecutar este código JS sería este:
@@ -154,31 +187,31 @@
                     <tr>
                         <td id="tdDni">DNI:</td>
                         <td id="tdDniInput">
-                            <input id="inputDni" type="text">
+                            <input id="inputDni" type="text" name="dni">
                         </td>
                     </tr>
                     <tr>
                         <td id="tdNom">Nombre:</td>
                         <td id="tdNomInput">
-                            <input id="inputNom" type="text">
+                            <input id="inputNom" type="text" name="nombre">
                         </td>
                     </tr>
                     <tr>
                         <td id="tdApe">Apellidos:</td>
                         <td id="tdApeInput">
-                            <input id="inputApe" type="text">
+                            <input id="inputApe" type="text" name="apellidos">
                         </td>
                     </tr>
                     <tr>
                         <td id="tdDir">Dirección:</td>
                         <td id="tdDirInput">
-                            <input id="inputDir" type="text">
+                            <input id="inputDir" type="text" name="direccion">
                         </td>
                     </tr>
                     <tr>
                         <td id="tdTel">Teléfono:</td>
                         <td id="tdTelInput">
-                            <input id="inputTel" type="text">
+                            <input id="inputTel" type="text" name="telefono">
                         </td>
                     </tr>
                 </table>

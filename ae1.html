@@ -40,14 +40,14 @@
 
             let inputDni = document.createElement("input"); // Crea el elemento inputDni
             inputDni.id = "inputDni";
-            inputDni.type = "text";
             inputDni.name = "dni"
+            inputDni.type = "text";
             tdDniInput.appendChild(inputDni); // Introduce el elemento inputDni en tdDniInput 
 
             trDni.appendChild(tdDni); // Introduce el elemento tdDni en trDni
             trDni.appendChild(tdDniInput); // Introduce el elemento tdDniInput en trDni
 
-            // NOMBRE
+            // Nombre
             let trNombre = document.createElement("tr");
 
             let tdNombre = document.createElement("td");
@@ -60,14 +60,14 @@
 
             let inputNombre = document.createElement("input");
             inputNombre.id = "inputNombre";
-            inputNombre.type = "text";
             inputNombre.name = "nombre";
+            inputNombre.type = "text";
             tdNombreInput.appendChild(inputNombre);
 
             trNombre.appendChild(tdNombre);
             trNombre.appendChild(tdNombreInput);
 
-            // APELLIDOS
+            // Apellidos
             let trApellido = document.createElement("tr");
 
             let tdApellido = document.createElement("td");
@@ -80,58 +80,52 @@
 
             let inputApellido = document.createElement("input");
             inputApellido.id = "inputApellido";
-            inputApellido.type = "text";
             inputApellido.name = "apellidos";
+            inputApellido.type = "text";
             tdApellidoInput.appendChild(inputApellido);
 
             trApellido.appendChild(tdApellido);
             trApellido.appendChild(tdApellidoInput);
-            // CORREGIDO HASTA AQUÍ
-            // DIRECCION
-            let trDir = document.createElement("tr");
+            
+            // Direccion
+            let trDireccion = document.createElement("tr");
 
-            let tdDir = document.createElement("td");
-            tdDir.id = "tdDir";
+            let tdDireccion = document.createElement("td");
+            tdDireccion.id = "tdDireccion";
+            let contenidoDireccion = document.createTextNode("Dirección:")
+            tdDireccion.appendChild(contenidoDireccion);
 
-            let contDir = document.createTextNode("Dirección:")
+            let tdDireccionInput = document.createElement("td");
+            tdDireccionInput.id = "tdDireccionInput";
 
-            tdDir.appendChild(contDir);
+            let inputDireccion = document.createElement("input");
+            inputDireccion.id = "inputDireccion";
+            inputDireccion.type = "text";
+            inputDireccion.name = "direccion";
+            tdDireccionInput.appendChild(inputDireccion);
 
-            let tdDirInput = document.createElement("td");
-            tdDirInput.id = "tdDirInput";
+            trDireccion.appendChild(tdDireccion);
+            trDireccion.appendChild(tdDireccionInput);
 
-            let inputDir = document.createElement("input");
-            inputDir.id = "inputDir";
-            inputDir.type = "text";
-            inputDir.name = "direccion";
+            // Telefono
+            let trTelefono = document.createElement("tr");
 
-            tdDirInput.appendChild(inputDir);
+            let tdTelefono = document.createElement("td");
+            tdTelefono.id = "tdTelefono";
+            let contenidoTelefono = document.createTextNode("Teléfono:")
+            tdTelefono.appendChild(contenidoTelefono);
 
-            trDir.appendChild(tdDir);
-            trDir.appendChild(tdDirInput);
+            let tdTelefonoInput = document.createElement("td");
+            tdTelefonoInput.id = "tdTelefonoInput";
 
-            // TELEFONO
-            let trTel = document.createElement("tr");
+            let inputTelefono = document.createElement("input");
+            inputTelefono.id = "inputTelefono";
+            inputTelefono.type = "text";
+            inputTelefono.name = "telefono";
+            tdTelefonoInput.appendChild(inputTelefono);
 
-            let tdTel = document.createElement("td");
-            tdTel.id = "tdTel";
-
-            let contTel = document.createTextNode("Teléfono:")
-
-            tdTel.appendChild(contTel);
-
-            let tdTelInput = document.createElement("td");
-            tdTelInput.id = "tdTelInput";
-
-            let inputTel = document.createElement("input");
-            inputTel.id = "inputTel";
-            inputTel.type = "text";
-            inputTel.name = "telefono";
-
-            tdTelInput.appendChild(inputTel);
-
-            trTel.appendChild(tdTel);
-            trTel.appendChild(tdTelInput);
+            trTelefono.appendChild(tdTelefono);
+            trTelefono.appendChild(tdTelefonoInput);
 
             // Aquí van los radio button
 
@@ -139,132 +133,66 @@
 
             // Aquí van las imágenes
             
-            // SELECT
-            let trSelect = document.createElement("tr");
+            // Select
+            let trSelect = document.createElement("tr"); // Crea el elemento trSelect
 
-            let tdConSel = document.createElement("td");
-            tdConSel.id = "tdConSel"
-            let conSel = document.createTextNode("Select:");
-            tdConSel.appendChild(conSel);
+            let tdContenidoSelect = document.createElement("td"); // Crea el elemento tdContenidoSelect
+            tdContenidoSelect.id = "tdContenidoSelect"
+            let contenidoSelect = document.createTextNode("Select:"); // Crea el contenido del elemento tdContenidoSelect
+            tdContenidoSelect.appendChild(contenidoSelect); // Introduce el elemento contenidoSelect en tdContenidoSelect
             
-            trSelect.appendChild(tdConSel);
+            trSelect.appendChild(tdContenidoSelect); // Introduce el elemento tdContenidoSelect en trSelect
 
-            let select = document.createElement("select");
+            let select = document.createElement("select"); // Crea el elemento select
 
-            let option1 = document.createElement("option");
-            //option1.setAttribute("value", "value1");
-            let option1Texto = document.createTextNode("opcion 1");
-            option1.appendChild(option1Texto);
+            let option1 = document.createElement("option");  // Crea el elemento option1
+            let option1Texto = document.createTextNode("opcion 1"); // Crea elcontenido del elemento option1
+            option1.appendChild(option1Texto); // Introduce el elemento option1Texto en option1
 
-            let option2 = document.createElement("option");
-            //option2.setAttribute("value", "value2");
-            let option2Texto = document.createTextNode("opcion 2");
-            option2.appendChild(option2Texto);
+            let option2 = document.createElement("option"); // Crea el elemento option2
+            let option2Texto = document.createTextNode("opcion 2"); // Crea elcontenido del elemento option2
+            option2.appendChild(option2Texto); // Introduce el elemento option1Texto en option2
 
-            let option3 = document.createElement("option");
-            //option3.setAttribute("value", "value3");
-            let option3Texto = document.createTextNode("opcion 3");
-            option3.appendChild(option3Texto);
+            let option3 = document.createElement("option"); // Crea el elemento option3
+            let option3Texto = document.createTextNode("opcion 3"); // Crea elcontenido del elemento option3
+            option3.appendChild(option3Texto); // Introduce el elemento option1Texto en option3
 
-            select.appendChild(option1);
-            select.appendChild(option2);
-            select.appendChild(option3);
+            select.appendChild(option1); // Introduce el elemento option1 en select
+            select.appendChild(option2); // Introduce el elemento option2 en select
+            select.appendChild(option3); // Introduce el elemento option3 en select
 
-            trSelect.appendChild(select);
+            trSelect.appendChild(select); //  // Introduce el elemento select en trSelect
 
-            /*
-            // SELEcT
-            let trSel = document.createElement("tr");
+            // Text area
+            let trTextArea = document.createElement("tr"); // Crea el elemento trTextArea
 
-            let tdConSel = document.createElement("td");
-            tdConSel.id = "tdConSel";
+            let tdContenidoTextArea = document.createElement("td"); // Crea el elemento tdContenidoTextArea
+            tdContenidoTextArea.id = "tdTexCon";
+            let contenidoTextArea = document.createTextNode("Text Area:") // Crea el contenido del elemento tdContenidoTextArea
+            tdContenidoTextArea.appendChild(contenidoTextArea); // Introduce el elemento contenidoTextArea en tdContenidoTextArea
 
-            let conSel = document.createTextNode("Select:");
+            let tdTextArea = document.createElement("td"); // Crea el elemento tdTextArea
+            tdTextArea.id = "tdTextArea";
 
-            tdConSel.appendChild(conSel);
+            let textArea = document.createElement("textarea"); // Crea el elemento textArea
+            textArea.id = "textArea";
+            textArea.name = "textArea";
+            tdTextArea.appendChild(textArea); // Introduce el elemento textArea en tdTextArea
 
-            let tdSel = document.createElement("td");
-            tdSel.id = "tdSel";
+            trTextArea.appendChild(tdContenidoTextArea); // Introduce el elemento tdContenidoTextArea en trTextArea
+            trTextArea.appendChild(tdTextArea); // Introduce el elemento tdTextArea en trTextArea
 
-            let selSel = document.createElement("select");
-            selSel.id = "selSel";
-            selSel.name = "select";
-
-            // Opción 1
-            let selOpt1 = document.createElement("option")
-
-            let conSelOpt1 = document.createTextNode("Opcicón 1");
-
-            selOpt1.appendChild(conSelOpt1);
             
-            // Opción 2
-            let selOpt2 = document.createElement("option");
-
-            let conSelOpt2 = document.createTextNode("Opcicón 2");
-            
-            selOpt2.appendChild(conSelOpt2);
-            // Opción 3
-            let selOpt3 = document.createElement("option");
-
-            let conSelOpt3 = document.createTextNode("Opcicón 3");
-
-            selOpt3.appendChild(conSelOpt3);
-            // Opción 4
-            let selOpt4 = document.createElement("option");
-
-            let conSelOpt4 = document.createTextNode("Opcicón 4");
-
-            selOpt4.appendChild(conSelOpt4);
-            // Opción 5
-            let selOpt5 = document.createElement("option");
-
-            let conSelOpt5 = document.createTextNode("Opcicón 5");
-
-            selOpt5.appendChild(conSelOpt5);
-            
-            selSel.appendChild(conSelOpt1);
-            selSel.appendChild(conSelOpt2);
-            selSel.appendChild(conSelOpt3);
-            selSel.appendChild(conSelOpt4);
-            selSel.appendChild(conSelOpt5);
-
-            tdSel.appendChild(selSel);
-
-            trSel.appendChild(tdConSel);
-            trSel.appendChild(tdSel);
-            */
-            // TEXT AREA
-            let trTex = document.createElement("tr"); // Crea el elemento trTex
-
-            let tdConTex = document.createElement("td"); // Crea el elemento tdConTex
-            tdConTex.id = "tdTexCon";
-
-            let conTex = document.createTextNode("Text Area:") // Crea el contenido del elemento tdConTex
-
-            tdConTex.appendChild(conTex); // Introduce el elemento conTex en tdConTex
-
-            let tdTexAre = document.createElement("td"); // Crea el elemento tdTexAre
-            tdTexAre.id = "tdTexAre";
-
-            let texAre = document.createElement("textarea"); // Crea el elemento texAre
-            texAre.id = "texAre";
-            texAre.name = "textArea";
-
-            tdTexAre.appendChild(texAre); // Introduce el elemento texAre en tdTexAre
-
-            trTex.appendChild(tdConTex); // Introduce el elemento tdConTex en trTex
-            trTex.appendChild(tdTexAre); // Introduce el elemento tdTexAre en trTex
-
             table.appendChild(trDni); // Introduce el elemento trDni en table
             table.appendChild(trNombre); // Introduce el elemento bre en table
             table.appendChild(trApellido); // Introduce el elemento trApellido en table
-            table.appendChild(trDir); // Introduce el elemento trDir en table
-            table.appendChild(trTel); // Introduce el elemento trTel en table
+            table.appendChild(trDireccion); // Introduce el elemento trDireccion en table
+            table.appendChild(trTelefono); // Introduce el elemento trTelefono en table
             // Aquí van los radio button
             // Aquí van los checkbox
             // Aquí van las imágenes
             table.appendChild(trSelect);
-            table.appendChild(trTex); // Introduce el elemento trTex en table
+            table.appendChild(trTextArea); // Introduce el elemento trTextArea en table
             
             form.appendChild(table); // Introduce el elemento table en form
 
@@ -294,15 +222,29 @@
                         </td>
                     </tr>
                     <tr>
-                        <td id="tdDir">Dirección:</td>
-                        <td id="tdDirInput">
-                            <input id="inputDir" type="text" name="direccion">
+                        <td id="tdDireccion">Dirección:</td>
+                        <td id="tdDireccionInput">
+                            <input id="inputDireccion" type="text" name="direccion">
                         </td>
                     </tr>
                     <tr>
-                        <td id="tdTel">Teléfono:</td>
-                        <td id="tdTelInput">
-                            <input id="inputTel" type="text" name="telefono">
+                        <td id="tdTelefono">Teléfono:</td>
+                        <td id="tdTelefonoInput">
+                            <input id="inputTelefono" type="text" name="telefono">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="tdContenidoSelect">Select:</td>
+                        <select>
+                            <option>opcion 1</option>
+                            <option>opcion 2</option>
+                            <option>opcion 3</option>
+                        </select>
+                    </tr>
+                    <tr>
+                        <td id="tdTexCon">Text Area:</td>
+                        <td id="tdTextArea">
+                            <textarea id="textArea" name="textArea"></textarea>
                         </td>
                     </tr>
                 </table>
@@ -310,17 +252,6 @@
             */
 
         }
-
-        /*
-        function cargar() {
-
-            let contenedor = document.createElement("div");
-            contenedor.id = "div1";
-
-            document.body.appendChild(contenedor);
-
-        }
-        */
 
     </script>
 

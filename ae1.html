@@ -18,13 +18,13 @@
 
             div1.appendChild(parrafo);
 
-            // Crea el formulario
+            // FORMULARIO
             let form = document.createElement("form");
             form.id = "form1";
             form.action = "urlServidor";
             form.method = "get";
 
-            // Crea la tabla
+            // TABLA
             let table = document.createElement("table");
 
             // DNI
@@ -47,7 +47,7 @@
             trDni.appendChild(tdDni); // Introduce el elemento tdDni en trDni
             trDni.appendChild(tdDniInput); // Introduce el elemento tdDniInput en trDni
 
-            // Nombre
+            // NOMBRE
             let trNombre = document.createElement("tr");
 
             let tdNombre = document.createElement("td");
@@ -67,7 +67,7 @@
             trNombre.appendChild(tdNombre);
             trNombre.appendChild(tdNombreInput);
 
-            // Apellidos
+            // APELLIDOS
             let trApellido = document.createElement("tr");
 
             let tdApellido = document.createElement("td");
@@ -87,7 +87,7 @@
             trApellido.appendChild(tdApellido);
             trApellido.appendChild(tdApellidoInput);
             
-            // Direccion
+            // DIRECCION
             let trDireccion = document.createElement("tr");
 
             let tdDireccion = document.createElement("td");
@@ -100,14 +100,14 @@
 
             let inputDireccion = document.createElement("input");
             inputDireccion.id = "inputDireccion";
-            inputDireccion.type = "text";
             inputDireccion.name = "direccion";
+            inputDireccion.type = "text";
             tdDireccionInput.appendChild(inputDireccion);
 
             trDireccion.appendChild(tdDireccion);
             trDireccion.appendChild(tdDireccionInput);
 
-            // Telefono
+            // TELEFONO
             let trTelefono = document.createElement("tr");
 
             let tdTelefono = document.createElement("td");
@@ -120,8 +120,8 @@
 
             let inputTelefono = document.createElement("input");
             inputTelefono.id = "inputTelefono";
-            inputTelefono.type = "text";
             inputTelefono.name = "telefono";
+            inputTelefono.type = "text";
             tdTelefonoInput.appendChild(inputTelefono);
 
             trTelefono.appendChild(tdTelefono);
@@ -129,11 +129,45 @@
 
             // Aquí van los radio button
 
-            // Aquí van los checkbox
+            // CHECK BOX
+            let trCheckbox = document.createElement("tr"); // Crea el elemento trCheckbox
+
+            let tdContenidoCheckbox = document.createElement("td"); // Crea el elemento tdContenidoCheckbox
+            tdContenidoCheckbox.id = "tdContenidoCheckbox";
+            let contenidoCheckbox = document.createTextNode("Checkbox"); // Crea el contenido del elemento tdContenidoCheckbox
+            tdContenidoCheckbox.appendChild(contenidoCheckbox); // Introduce el elememento contenidoCheckbox en tdContenidoCheckbox
+
+            trCheckbox.appendChild(tdContenidoCheckbox); // Introduce el elemento tdContenidoCheckbox en trCheckbox
+
+            // checkbox1
+            let checkbox1Input = document.createElement("input"); // Crea el elemento checkbox1Input
+            checkbox1Input.id = "checkbox1Input";
+            checkbox1Input.type = "checkbox";
+            checkbox1Input.value = "checkbox1Input";
+
+            let checkbox1Label = document.createElement("label"); // Crea el elemento checkbox1Label
+            let labelCheckbox1 = document.createTextNode("Checkbox 1"); // Crea el contenido del elemento checkbox1Label
+            checkbox1Label.appendChild(labelCheckbox1); // Introduce el elemento labelCheckbox1 em checkbox1Label
+
+            trCheckbox.appendChild(checkbox1Input); // Introduce el elemento checkbox1Input en trCheckbox
+            trCheckbox.appendChild(checkbox1Label); // Introduce el elemento checkbox1Label en trCheckbox
+
+            // checkbox2
+            let checkbox2Input = document.createElement("input"); // Crea el elemento checkbox2Input
+            checkbox2Input.id = "checkbox2Input";
+            checkbox2Input.type = "checkbox";
+            checkbox2Input.value = "checkbox2Input";
+
+            let checkbox2Label = document.createElement("label"); // Crea el elemento checkbox2Label
+            let labelCheckbox2 = document.createTextNode("Checkbox 2") // Crea el contenido del elemento checkbox2Label
+            checkbox2Label.appendChild(labelCheckbox2); // Introduce el elemento labelCheckbox2 em checkbox2Label
+
+            trCheckbox.appendChild(checkbox2Input); // Introduce el elemento checkbox2Input en trCheckbox
+            trCheckbox.appendChild(checkbox2Label); // Introduce el elemento checkbox2Label en trCheckbox
 
             // Aquí van las imágenes
             
-            // Select
+            // SELECT
             let trSelect = document.createElement("tr"); // Crea el elemento trSelect
 
             let tdContenidoSelect = document.createElement("td"); // Crea el elemento tdContenidoSelect
@@ -145,14 +179,17 @@
 
             let select = document.createElement("select"); // Crea el elemento select
 
+            // option1
             let option1 = document.createElement("option");  // Crea el elemento option1
             let option1Texto = document.createTextNode("opcion 1"); // Crea elcontenido del elemento option1
             option1.appendChild(option1Texto); // Introduce el elemento option1Texto en option1
 
+            // option2
             let option2 = document.createElement("option"); // Crea el elemento option2
             let option2Texto = document.createTextNode("opcion 2"); // Crea elcontenido del elemento option2
             option2.appendChild(option2Texto); // Introduce el elemento option1Texto en option2
 
+            // option3
             let option3 = document.createElement("option"); // Crea el elemento option3
             let option3Texto = document.createTextNode("opcion 3"); // Crea elcontenido del elemento option3
             option3.appendChild(option3Texto); // Introduce el elemento option1Texto en option3
@@ -161,9 +198,9 @@
             select.appendChild(option2); // Introduce el elemento option2 en select
             select.appendChild(option3); // Introduce el elemento option3 en select
 
-            trSelect.appendChild(select); //  // Introduce el elemento select en trSelect
+            trSelect.appendChild(select); // Introduce el elemento select en trSelect
 
-            // Text area
+            // TEXT AREA
             let trTextArea = document.createElement("tr"); // Crea el elemento trTextArea
 
             let tdContenidoTextArea = document.createElement("td"); // Crea el elemento tdContenidoTextArea
@@ -189,9 +226,9 @@
             table.appendChild(trDireccion); // Introduce el elemento trDireccion en table
             table.appendChild(trTelefono); // Introduce el elemento trTelefono en table
             // Aquí van los radio button
-            // Aquí van los checkbox
+            table.appendChild(trCheckbox); // Introduce el elemento trCheckbox en table
             // Aquí van las imágenes
-            table.appendChild(trSelect);
+            table.appendChild(trSelect); // Introduce el elemento trSelect en table
             table.appendChild(trTextArea); // Introduce el elemento trTextArea en table
             
             form.appendChild(table); // Introduce el elemento table en form
@@ -232,6 +269,13 @@
                         <td id="tdTelefonoInput">
                             <input id="inputTelefono" type="text" name="telefono">
                         </td>
+                    </tr>
+                    <tr>
+                        <td id="tdContenidoCheckbox">Checkbox</td>
+                        <input id="checkbox1Input" type="checkbox" value="checkbox1Input">
+                        <label>Checkbox 1</label>
+                        <input id="checkbox2Input" type="checkbox" value="checkbox2Input">
+                        <label>Checkbox 2</label>
                     </tr>
                     <tr>
                         <td id="tdContenidoSelect">Select:</td>

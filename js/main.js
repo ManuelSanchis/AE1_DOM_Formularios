@@ -4,7 +4,7 @@ let br = document.createElement("br");
 
 //Campos de texto donde poner el DNI, el nombre y los apellidos, la dirección y el teléfono.
 
-let labels = ["DNI", "Nombre", "Apellido", "Edad", "Dirección"];
+let labels = ["DNI", "Nombre", "Apellidos", "Dirección", "Teléfono"];
 for (let i = 0; i < labels.length; i++) {
   let br = document.createElement("br");
 

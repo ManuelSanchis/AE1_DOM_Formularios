@@ -62,5 +62,6 @@ btn.onclick = function () {
     }
   }
 
+  totalPedido += " euros";
   alert(totalPedido);
 };

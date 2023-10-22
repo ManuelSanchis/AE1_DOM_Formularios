@@ -101,8 +101,6 @@ for (let i = 0; i < rbValues.length; i++) {
   insertar.appendChild(rb);
 }
 
-//TO DO: dividir en dos radio buttons, break o continue?
-
 //Cinco checkbox diferentes
 
 let p2 = document.createElement("p");

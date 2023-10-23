@@ -17,8 +17,9 @@ let btn = document.getElementById("btn");
 //Esta función calcula el total del pedido
 //Para la elección de la pizza usamos un condicional ya que radio button solo permite seleccionar una opción
 //Luego recorremos con un for el array de ingredientes y si está seleccionado le decimos que lo añada al total del precio
-//Además, validaremos que los campos de texto sean rellenados y que al menos se elija una pizza y un ingredientes
-btn.onclick = function () {
+//Además, validaremos que los campos de texto sean rellenados y que al menos se elija una pizza y un ingrediente llamando a la función corrspondiente encargada de ello
+
+function validateForm() {
   if (nombre.value.trim() == "") {
     alert("El nombre es obligatorio");
   }
@@ -45,7 +46,9 @@ btn.onclick = function () {
   ) {
     alert("Elige un ingrediente");
   }
+}
 
+function totalAmount() {
   let totalPedido = 0;
 
   if (pizzaS.checked) {
@@ -63,5 +66,10 @@ btn.onclick = function () {
   }
 
   totalPedido += " euros";
-  alert(totalPedido);
+  alert(`El total del pedido son: ${totalPedido}`);
+}
+
+btn.onclick = function () {
+  validateForm();
+  totalAmount();
 };

@@ -1,19 +1,18 @@
-//Obtenemos el div contenedor principal
-let contenedor = document.getElementById("contenedor");
+let contenedor = document.getElementById("contenedor");//Obtenemos el div contenedor principal
 
-//Creamos un h1 para usar como encabezado de la página web.
-let titulo = document.createElement("h1");
+let titulo = document.createElement("h1");//Creamos un h1 para usar como encabezado de la página web.
 titulo.id = "titulo";
 titulo.textContent = "Actividad 1 / Desarrollo en entorno cliente";
 contenedor.appendChild(titulo);
 
-//Colocamos la primera imagen
-let img1 = document.createElement("img");
+let img1 = document.createElement("img");//Colocamos la primera imagen
 img1.src = "/Sergio/img/img1.jpg";
 img1.width = "800";
 img1.height = "250";
 contenedor.appendChild(img1);
-contenedor.appendChild(document.createElement("br")); //Añadimos espacios para separar los contenidos
+contenedor.appendChild(document.createElement("br"));//Añadimos espacios para separar los contenidos
+contenedor.appendChild(document.createElement("br"));
+
 
 //Añadimos campos de texto para el formulario
 
@@ -100,7 +99,60 @@ for (let i = 0; i < opcionesCheck.length; i++) {
   contenedor.appendChild(document.createElement("br"));
 }
 
+//Titulo para requisito de checkbox
+contenedor.appendChild(document.createElement("br")); //Espacio
+let tituloSelect = document.createElement("h2");
+tituloSelect.textContent =
+  "Selecciona la probabilidad de que recomiendes visitar Córdoba";
+contenedor.appendChild(tituloSelect);
 
-//Añadimos un textArea
+//Añadimos un campo select
+
+let opcionesSelect = [
+  "", //Para que se muestre en blanco antes de seleccionar cualquier opción
+  "100%",
+  "200%",
+  "Segurísimo",
+  "Aro que si sosio(cordobés puro)",
+  "Solo si me invitan a un perol",
+];
+
+let select1 = document.createElement("select");
+for (let i = 0; i < opcionesSelect.length; i++) {
+  let option = document.createElement("option");
+  option.textContent = opcionesSelect[i];
+  select1.appendChild(option);
+}
+contenedor.appendChild(select1);
+contenedor.appendChild(document.createElement("br"));
+
+//Titulo para el requisito textArea
+contenedor.appendChild(document.createElement("br")); //Espacio
+let tituloText = document.createElement("h2");
+tituloText.textContent =
+  "Si tienes alguna sugerencia para mejorar, compártela con nosotros";
+contenedor.appendChild(tituloText);
+
+//añadimos un campo textArea
+let textArea = document.createElement("textarea");
+textArea.setAttribute(
+  "placeholder",
+  "¿Mejorar? ¿Como vas a mejorar lo perfecto? Alma de cántaro..."
+);
+textArea.style.width = "500px";
+textArea.style.height = "100px";
+contenedor.appendChild(textArea);
+contenedor.appendChild(document.createElement("br"));
+contenedor.appendChild(document.createElement("br"));
 
 
+//Añadimos la segunda imagen
+let img2 = document.createElement("img");
+img2.src = "/Sergio/img/img2.jpg";
+img2.width = "800";
+img2.height = "250";
+contenedor.appendChild(img2);
+
+for (let i = 0; i < 5; i++) {
+  contenedor.appendChild(document.createElement("br"));
+}

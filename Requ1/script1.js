@@ -6,7 +6,7 @@ titulo.textContent = "Actividad 1 / Desarrollo en entorno cliente";
 contenedor.appendChild(titulo);
 
 let img1 = document.createElement("img");//Colocamos la primera imagen
-img1.src = "/Sergio/img/img1.jpg";
+img1.src = "/Requ1/img/img1.jpg";
 img1.width = "800";
 img1.height = "250";
 contenedor.appendChild(img1);
@@ -148,7 +148,7 @@ contenedor.appendChild(document.createElement("br"));
 
 //Añadimos la segunda imagen
 let img2 = document.createElement("img");
-img2.src = "/Sergio/img/img2.jpg";
+img2.src = "/Requ1/img/img2.jpg";
 img2.width = "800";
 img2.height = "250";
 contenedor.appendChild(img2);

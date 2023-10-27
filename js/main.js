@@ -87,21 +87,21 @@ for (let i = 0; i < rbValues.length; i++) {
 //Cinco checkbox diferentes
 
 let p2 = document.createElement("p");
-let txt2 = document.createTextNode("Elige tu framework favorito: ");
+let txt2 = document.createTextNode("Elige tus frameworks favoritos: ");
 p2.appendChild(txt2);
 insertar.appendChild(p2);
 
-for (let i = 0; i < 5; i++) {
-  let br = document.createElement("br");
+//Creamos los valores para los check boxes
+let chValues = ["Angular", "React", "Vue", "Astro", "Svelte"];
 
-  //Creamos los valores para los check boxes
-  let chValues = ["Angular", "React", "Vue", "Astro", "Svelte"];
+for (let i = 0; i < chValues.length; i++) {
+  let br = document.createElement("br");
 
   //Creamos el elemento input de tipo  checkbox, le asignamos un value y un nombre para que formen un grupo de botones, les asignamos un ID diferente
   let ch = document.createElement("input");
   ch.type = "checkbox";
   ch.value = chValues[i];
-  ch.name = "Programming language";
+  ch.name = "Framework";
   ch.id = chValues[i];
 
   //Creamos las labels, luego un nodo de texto para cada una y en cada iteración del bucle se le asignaráa un nombre del array chValues para, finalmente, añadir ese texto al elemento label

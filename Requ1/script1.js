@@ -1,18 +1,17 @@
-let contenedor = document.getElementById("contenedor");//Obtenemos el div contenedor principal
+let contenedor = document.getElementById("contenedor"); //Obtenemos el div contenedor principal
 
-let titulo = document.createElement("h1");//Creamos un h1 para usar como encabezado de la página web.
+let titulo = document.createElement("h1"); //Creamos un h1 para usar como encabezado de la página web.
 titulo.id = "titulo";
-titulo.textContent = "Actividad 1 / Desarrollo en entorno cliente";
+titulo.textContent = "Actividad 1. Req1 / Desarrollo en entorno cliente";
 contenedor.appendChild(titulo);
 
-let img1 = document.createElement("img");//Colocamos la primera imagen
+let img1 = document.createElement("img"); //Colocamos la primera imagen
 img1.src = "/Requ1/img/img1.jpg";
 img1.width = "800";
 img1.height = "250";
 contenedor.appendChild(img1);
-contenedor.appendChild(document.createElement("br"));//Añadimos espacios para separar los contenidos
+contenedor.appendChild(document.createElement("br")); //Añadimos espacios para separar los contenidos
 contenedor.appendChild(document.createElement("br"));
-
 
 //Añadimos campos de texto para el formulario
 
@@ -144,7 +143,6 @@ textArea.style.height = "100px";
 contenedor.appendChild(textArea);
 contenedor.appendChild(document.createElement("br"));
 contenedor.appendChild(document.createElement("br"));
-
 
 //Añadimos la segunda imagen
 let img2 = document.createElement("img");

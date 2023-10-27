@@ -16,25 +16,8 @@ for (let i = 0; i < labels.length; i++) {
 
   //Creamos los inputs, uno por cada campo
   let inputFields = document.createElement("input");
-
   inputFields.type = "text";
-  switch (i) {
-    case 0:
-      inputFields.name = "DNI";
-      break;
-    case 1:
-      inputFields.name = "Nombre";
-      break;
-    case 2:
-      inputFields.name = "Apellidos";
-      break;
-    case 3:
-      inputFields.name = "Direccion";
-      break;
-    case 4:
-      inputFields.name = "Teléfono";
-      break;
-  }
+  inputFields.name = labels[i];
 
   insertar.appendChild(label).appendChild(labelText);
   insertar.appendChild(br);

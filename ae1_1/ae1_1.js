@@ -8,24 +8,24 @@ form.method = "get";
 let table = document.createElement("table");
 
 // DNI
-let trDni = document.createElement("tr"); // Crea el elemento trDni
+let trDni = document.createElement("tr"); 
 
-let tdDni = document.createElement("td"); // Crea el elemento tdDni
+let tdDni = document.createElement("td"); 
 tdDni.id = "tdDni";
-let contenidoDni = document.createTextNode("DNI:"); // Crea el contenido del elemento tdDni
-tdDni.appendChild(contenidoDni); // Introduce el elemento contenidoDni en tdDni
+let contenidoDni = document.createTextNode("DNI:"); 
+tdDni.appendChild(contenidoDni); 
 
-let tdDniInput = document.createElement("td"); // Crea el elemento tdDniInput
+let tdDniInput = document.createElement("td"); 
 tdDniInput.id = "tdDniInput";
 
-let inputDni = document.createElement("input"); // Crea el elemento inputDni
+let inputDni = document.createElement("input"); 
 inputDni.id = "inputDni";
 inputDni.name = "dni";
 inputDni.type = "text";
-tdDniInput.appendChild(inputDni); // Introduce el elemento inputDni en tdDniInput
+tdDniInput.appendChild(inputDni); 
 
-trDni.appendChild(tdDni); // Introduce el elemento tdDni en trDni
-trDni.appendChild(tdDniInput); // Introduce el elemento tdDniInput en trDni
+trDni.appendChild(tdDni); 
+trDni.appendChild(tdDniInput); 
 
 // NOMBRE
 let trNombre = document.createElement("tr");
@@ -108,12 +108,11 @@ trTelefono.appendChild(tdTelefono);
 trTelefono.appendChild(tdTelefonoInput);
 
 // RADIO BUTTON
-let trRadiobutton = document.createElement("tr"); // Crea el elemento trRadiobutton
-
-let tdContenidoRadiobutton = document.createElement("td"); // Crea el elemento tdContenidoRadiobutton
+let trRadiobutton = document.createElement("tr"); 
+let tdContenidoRadiobutton = document.createElement("td"); 
 tdContenidoRadiobutton.id = "tdContenidoRadiobutton";
-let contenidoRadiobutton = document.createTextNode("Radio Button"); // Crea el contenido del elemento tdContenidoRadiobutton
-tdContenidoRadiobutton.appendChild(contenidoRadiobutton); // Introduce el elememento contenidoRadiobutton en tdContenidoRadiobutton
+let contenidoRadiobutton = document.createTextNode("Radio Button"); 
+tdContenidoRadiobutton.appendChild(contenidoRadiobutton); 
 
 trRadiobutton.appendChild(tdContenidoRadiobutton);
 
@@ -142,51 +141,51 @@ trRadiobutton.appendChild(radiobutton2Input);
 trRadiobutton.appendChild(radiobutton2Label);
 
 // CHECK BOX
-let trCheckbox = document.createElement("tr"); // Crea el elemento trCheckbox
+let trCheckbox = document.createElement("tr"); 
 
-let tdContenidoCheckbox = document.createElement("td"); // Crea el elemento tdContenidoCheckbox
+let tdContenidoCheckbox = document.createElement("td"); 
 tdContenidoCheckbox.id = "tdContenidoCheckbox";
-let contenidoCheckbox = document.createTextNode("Checkbox"); // Crea el contenido del elemento tdContenidoCheckbox
-tdContenidoCheckbox.appendChild(contenidoCheckbox); // Introduce el elememento contenidoCheckbox en tdContenidoCheckbox
+let contenidoCheckbox = document.createTextNode("Checkbox"); 
+tdContenidoCheckbox.appendChild(contenidoCheckbox); 
 
-trCheckbox.appendChild(tdContenidoCheckbox); // Introduce el elemento tdContenidoCheckbox en trCheckbox
+trCheckbox.appendChild(tdContenidoCheckbox); 
 
 // checkbox1
-let checkbox1Input = document.createElement("input"); // Crea el elemento checkbox1Input
+let checkbox1Input = document.createElement("input"); 
 checkbox1Input.id = "checkbox1Input";
 checkbox1Input.type = "checkbox";
 checkbox1Input.value = "checkbox1Input";
 
-let checkbox1Label = document.createElement("label"); // Crea el elemento checkbox1Label
-let labelCheckbox1 = document.createTextNode("Checkbox 1"); // Crea el contenido del elemento checkbox1Label
-checkbox1Label.appendChild(labelCheckbox1); // Introduce el elemento labelCheckbox1 em checkbox1Label
+let checkbox1Label = document.createElement("label"); 
+let labelCheckbox1 = document.createTextNode("Checkbox 1"); 
+checkbox1Label.appendChild(labelCheckbox1); 
 
-trCheckbox.appendChild(checkbox1Input); // Introduce el elemento checkbox1Input en trCheckbox
-trCheckbox.appendChild(checkbox1Label); // Introduce el elemento checkbox1Label en trCheckbox
+trCheckbox.appendChild(checkbox1Input); 
+trCheckbox.appendChild(checkbox1Label); 
 
 // checkbox2
-let checkbox2Input = document.createElement("input"); // Crea el elemento checkbox2Input
+let checkbox2Input = document.createElement("input"); 
 checkbox2Input.id = "checkbox2Input";
 checkbox2Input.type = "checkbox";
 checkbox2Input.value = "checkbox2Input";
 
-let checkbox2Label = document.createElement("label"); // Crea el elemento checkbox2Label
-let labelCheckbox2 = document.createTextNode("Checkbox 2"); // Crea el contenido del elemento checkbox2Label
-checkbox2Label.appendChild(labelCheckbox2); // Introduce el elemento labelCheckbox2 em checkbox2Label
+let checkbox2Label = document.createElement("label"); 
+let labelCheckbox2 = document.createTextNode("Checkbox 2"); 
+checkbox2Label.appendChild(labelCheckbox2); 
 
-trCheckbox.appendChild(checkbox2Input); // Introduce el elemento checkbox2Input en trCheckbox
-trCheckbox.appendChild(checkbox2Label); // Introduce el elemento checkbox2Label en trCheckbox
+trCheckbox.appendChild(checkbox2Input); 
+trCheckbox.appendChild(checkbox2Label); 
 
 // IMAGENES
 // imagen1
-let trImg1 = document.createElement("tr"); // Crea el elemento trImg1
+let trImg1 = document.createElement("tr"); 
 
-let tdContenidoImg1 = document.createElement("td"); // Crea el elemento tdContenidoImg1
+let tdContenidoImg1 = document.createElement("td"); 
 tdContenidoImg1.id = "tdContenidoImg1";
-let contenidoImg1 = document.createTextNode("Imagen 1:"); // Crea el contenido del elemento tdContenidoImg1
-tdContenidoImg1.appendChild(contenidoImg1); // Introduce el elememento contenidoImg1 en tdContenidoImg1
+let contenidoImg1 = document.createTextNode("Imagen 1:"); 
+tdContenidoImg1.appendChild(contenidoImg1); 
 
-trImg1.appendChild(tdContenidoImg1); // Introduce el elemento tdContenidoImg1 en trImg1
+trImg1.appendChild(tdContenidoImg1); 
 
 let tdImg1 = document.createElement("td");
 let img1 = document.createElement("img");
@@ -196,14 +195,14 @@ tdImg1.appendChild(img1);
 trImg1.appendChild(tdImg1);
 
 // imagen2
-let trImg2 = document.createElement("tr"); // Crea el elemento trImg2
+let trImg2 = document.createElement("tr"); 
 
-let tdContenidoImg2 = document.createElement("td"); // Crea el elemento tdContenidoImg2
+let tdContenidoImg2 = document.createElement("td"); 
 tdContenidoImg2.id = "tdContenidoImg2";
-let contenidoImg2 = document.createTextNode("Imagen 2:"); // Crea el contenido del elemento tdContenidoImg2
-tdContenidoImg2.appendChild(contenidoImg1); // Introduce el elememento contenidoImg1 en tdContenidoImg2
+let contenidoImg2 = document.createTextNode("Imagen 2:"); 
+tdContenidoImg2.appendChild(contenidoImg1); 
 
-trImg1.appendChild(tdContenidoImg1); // Introduce el elemento tdContenidoImg2 en trImg2
+trImg1.appendChild(tdContenidoImg1); 
 let tdImg2 = document.createElement("td");
 let img2 = document.createElement("img");
 img2.src = "/ae1_1/img/img2.jpg";
@@ -212,56 +211,56 @@ tdImg2.appendChild(img2);
 trImg2.appendChild(tdImg2);
 
 // SELECT
-let trSelect = document.createElement("tr"); // Crea el elemento trSelect
+let trSelect = document.createElement("tr"); 
 
-let tdContenidoSelect = document.createElement("td"); // Crea el elemento tdContenidoSelect
+let tdContenidoSelect = document.createElement("td"); 
 tdContenidoSelect.id = "tdContenidoSelect";
-let contenidoSelect = document.createTextNode("Select:"); // Crea el contenido del elemento tdContenidoSelect
-tdContenidoSelect.appendChild(contenidoSelect); // Introduce el elemento contenidoSelect en tdContenidoSelect
+let contenidoSelect = document.createTextNode("Select:"); 
+tdContenidoSelect.appendChild(contenidoSelect); 
 
-trSelect.appendChild(tdContenidoSelect); // Introduce el elemento tdContenidoSelect en trSelect
+trSelect.appendChild(tdContenidoSelect); 
 
-let select = document.createElement("select"); // Crea el elemento select
+let select = document.createElement("select"); 
 
 // option1
-let option1 = document.createElement("option"); // Crea el elemento option1
-let option1Texto = document.createTextNode("opcion 1"); // Crea elcontenido del elemento option1
-option1.appendChild(option1Texto); // Introduce el elemento option1Texto en option1
+let option1 = document.createElement("option"); 
+let option1Texto = document.createTextNode("opcion 1"); 
+option1.appendChild(option1Texto); 
 
 // option2
-let option2 = document.createElement("option"); // Crea el elemento option2
-let option2Texto = document.createTextNode("opcion 2"); // Crea elcontenido del elemento option2
-option2.appendChild(option2Texto); // Introduce el elemento option1Texto en option2
+let option2 = document.createElement("option"); 
+let option2Texto = document.createTextNode("opcion 2"); 
+option2.appendChild(option2Texto); 
 
 // option3
-let option3 = document.createElement("option"); // Crea el elemento option3
-let option3Texto = document.createTextNode("opcion 3"); // Crea elcontenido del elemento option3
-option3.appendChild(option3Texto); // Introduce el elemento option1Texto en option3
+let option3 = document.createElement("option"); 
+let option3Texto = document.createTextNode("opcion 3"); 
+option3.appendChild(option3Texto); 
 
-select.appendChild(option1); // Introduce el elemento option1 en select
-select.appendChild(option2); // Introduce el elemento option2 en select
-select.appendChild(option3); // Introduce el elemento option3 en select
+select.appendChild(option1); 
+select.appendChild(option2); 
+select.appendChild(option3); 
 
-trSelect.appendChild(select); // Introduce el elemento select en trSelect
+trSelect.appendChild(select); 
 
 // TEXT AREA
-let trTextArea = document.createElement("tr"); // Crea el elemento trTextArea
+let trTextArea = document.createElement("tr"); 
 
-let tdContenidoTextArea = document.createElement("td"); // Crea el elemento tdContenidoTextArea
+let tdContenidoTextArea = document.createElement("td"); 
 tdContenidoTextArea.id = "tdTexCon";
-let contenidoTextArea = document.createTextNode("Text Area:"); // Crea el contenido del elemento tdContenidoTextArea
-tdContenidoTextArea.appendChild(contenidoTextArea); // Introduce el elemento contenidoTextArea en tdContenidoTextArea
+let contenidoTextArea = document.createTextNode("Text Area:"); 
+tdContenidoTextArea.appendChild(contenidoTextArea); 
 
-let tdTextArea = document.createElement("td"); // Crea el elemento tdTextArea
+let tdTextArea = document.createElement("td"); 
 tdTextArea.id = "tdTextArea";
 
-let textArea = document.createElement("textarea"); // Crea el elemento textArea
+let textArea = document.createElement("textarea"); 
 textArea.id = "textArea";
 textArea.name = "textArea";
-tdTextArea.appendChild(textArea); // Introduce el elemento textArea en tdTextArea
+tdTextArea.appendChild(textArea); 
 
-trTextArea.appendChild(tdContenidoTextArea); // Introduce el elemento tdContenidoTextArea en trTextArea
-trTextArea.appendChild(tdTextArea); // Introduce el elemento tdTextArea en trTextArea
+trTextArea.appendChild(tdContenidoTextArea); 
+trTextArea.appendChild(tdTextArea); 
 
 table.appendChild(trDni); // Introduce el elemento trDni en table
 table.appendChild(trNombre); // Introduce el elemento trNombre en table

@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pizzera</title>
+    <script type="text/javascript" src="js/pizzeria.js"></script> 
 </head>
-<body>
-  
+
+<!--
+    Le metemos estilos a la pagina
+-->
+<body style="text-align: center; background-color: rgb(203, 239, 243);">
+
+    <h3> Datos de entrega : </h3>
+    <hr style="width: 8%;"> 
+    <form id="formulario">
+        <label for="nombre"> Nombre :
+            <input type="text" name="nombre" id="nombre">
+        </label>
+        <br/>
+        <br/>
+
+        <label for="direccion">Dirección :
+            <input type="text" name="direccion" id="direccion">
+        </label>
+        <br/>
+        <br/>
+        
+        <label for="telefono"> Teléfono :
+            <input type="text" name="telefono" id="telefono">
+        </label>
+        <br/>
+        <br/>
+        
+        <label for="email"> Email :
+            <input type="text" name="email" id="email">
+        </label>
+        <br/>
+        <br/>
+        <hr style="width: 35%;"> 
+
+        
+        
+        <!--
+            Inputs para hacer el radio button para el tamaño de la pizza
+        -->
+        <table onclick="validacionButton()">
+            <h3> Tamaño de la pizza : </h3>
+            <hr style="width: 9%;"> 
+            <input type="radio" name="tamaño" id="pequeña">
+                <label for="pequeña">Pequeña</label>
+            </input>
+
+            <input type="radio" name="tamaño" id="mediana">
+                <label for="mediana">Mediana</label>
+            </input>
+        
+
+            <input type="radio" name="tamaño" id="grande">
+                <label for="grande">Grande</label>
+            </input>
+
+        
+        
+        </table>
+        <br/>
+
+        <!--
+            Checkbox para los ingredientes de la pizza
+        -->
+        <table>
+            <h3>Ingredientes de la pizza (elige todos los que quieras) : </h3>
+            <hr style="width: 23%;"> 
+            <input type="checkbox" name="ingrediente" id="queso">
+                <label for="queso">Queso </label>
+            </input>
+
+            <input type="checkbox" name="ingrediente" id="pechuga">
+                <label for="pechuga">Pechuga </label>
+            </input>
+
+            <input type="checkbox" name="ingrediente" id="piña">
+                <label for="piña">Piña </label>
+            </input>
+
+            <input type="checkbox" name="ingrediente" id="tomate">
+                <label for="tomate">Tomate </label>
+            </input>
+        </table>
+        <br/>
+        <br/>
+
+        <button id="botonProcesar">procesar</button>
+    </form>
+
+    <p id="alerta" style="color: red; display: none;">Tienes que rellenar todos los campos</p>
+    <p id="correcto" style="color: green; display: none;"> Pedido realizado correctamente </p>
 </body>
 </html>

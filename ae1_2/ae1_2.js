@@ -1,17 +1,6 @@
 
 // Funcion que comprueba que todos los campos del formulario esten debidamente cumplimentados
 function validar() {
-  
-  /*
-  let peq = document.getElementById("peq");
-  let med = document.getElementById("med");
-  let fam = document.getElementById("fam");
-
-  let masaEsp = document.getElementById("masaEsp");
-  let salsaEsp = document.getElementById("salsaEsp");
-  let pienso = document.getElementById("pienso");
-  let aceitunas = document.getElementById("aceitunas");
-  */
 
   if (nombre.value.trim() == "") {
     alert("El nombre es obligatorio");

@@ -3,23 +3,23 @@
 function validar() {
 
   if (nombre.value.trim() == "") {
-    alert("El nombre es obligatorio");
+    alert("¡Dinos tu nombre!");
   }
 
   if (direccion.value.trim() == "") {
-    alert("La dirección es necesaria");
+    alert("¡Si no sabemos tu dirección no te podremos enviar el pedido!");
   }
 
   if (telefono.value.trim() == "") {
-    alert("El telefono es obligatorio");
+    alert("¿Cual es tu número de teléfono?");
   }
 
   if (email.value.trim() == "") {
-    alert("Necesitamos un email");
+    alert("¡Dinos tu email!");
   }
 
   if (!peq.checked && !med.checked && !fam.checked) {
-    alert("¿De que tamaño quieres tu pizza?");
+    alert("¿Cuanta hambre tienes hoy?");
   }
 
   if (

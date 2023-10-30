@@ -23,6 +23,8 @@ for (let i = 0; i < campos.length; i++) {
   input.setAttribute("type", "text");
   input.setAttribute("placeholder", "Introduzca su " + campos[i]); //Usamos el índice para colocar un placeholder en cada input
   contenedor.appendChild(label);
+  contenedor.appendChild(document.createElement("br"));
+
   contenedor.appendChild(input);
   contenedor.appendChild(document.createElement("br"));
 }

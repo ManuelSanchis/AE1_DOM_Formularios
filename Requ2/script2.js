@@ -13,11 +13,10 @@ let inputs2 = document.getElementsByName("ingredientes"); //Extraemos todos los 
 let checkInputs = []; //Array para almacenar y poder recorrer todos los checkbox
 let seleccionado2 = false; //Variable para comprobar si un checkbox está marcado
 
-//Estas 4 variables y el array se usarán para la función de calculo de precio
+//Estas 3 variables se usarán para la función de calculo de precio
 let peq = document.getElementById("pequeña");
 let med = document.getElementById("mediana");
 let gra = document.getElementById("grande");
-let precio = 0;
 
 function validar() {
   for (const input of inputs1) {
@@ -68,26 +67,34 @@ function validar() {
 }
 
 function precioTotal() {
-   
-  if (peq.checked) {// Sumamos el precio del tamaño de la pizza
-    precio += 5;
+
+  // Sumamos el precio del tamaño de la pizza
+  if (peq.checked) {
+    precioBase = 5;
   } else if (med.checked) {
-    precio += 10;
+    precioBase = 10;
   } else if (gra.checked) {
-    precio += 15;
+    precioBase = 15;
   }
 
-  for (const input of checkInputs) {// Recorremos el array de checkbox y sumamos el valor de los ingredientes
-    if (input.checked) {
-      precio += 1;
+  //Recorremos los ingredientes añadiendo 1 en caso de que este el checkbox seleccionado
+  let ingredientes = document.getElementsByName("ingredientes");
+  let precioIng = 0;
+
+  for (let i = 0; i < ingredientes.length; i++) {
+    if (ingredientes[i].checked) {
+      precioIng += 1;
     }
   }
-  
-  alert("El precio total es de " + precio + " €");
+
+  let precioTotal = precioBase + precioIng;
+
+  alert("El precio total es de " + precioTotal + " €");
 }
 
 boton.onclick = function () {
-  if (validar()) {
+  let correcto = validar();
+  if (correcto) {
     precioTotal();
   }
 };

@@ -160,13 +160,30 @@ var option4Contenido = document.createTextNode("Transferencia bancaria")
 selectPago.appendChild(option4)
 option4.appendChild(option4Contenido)
 
-table.appendChild(br)
+//Creacion de la imagen 1
+var img = document.createElement("img")
+img.class ="fondo"
+img.src ="img/visa.png"
+img.style ="width:70px"
+div.appendChild(img)
 
+//Creacion de la imagen 2
+var img = document.createElement("img")
+img.class ="fondo"
+img.src ="img/bizum.png"
+img.style ="width:100px"
+div.appendChild(img)
+
+//Creacion de una tercera imagen para que tenga sentido
+var img = document.createElement("img")
+img.class ="fondo"
+img.src ="img/transferencia.jpg"
+img.style ="width:80px"
+div.appendChild(img)
 
 // creamos una linea para separar 
 var hr = document.createElement("hr")
 div.appendChild(hr)
-
 
 //Creamos "h3" para preguntar que tipo de peliculas prefieren mas
 var h3Pregunta = document.createElement("h3")
@@ -174,11 +191,9 @@ div.appendChild(h3Pregunta)
 var h3PreguntaContenido = document.createTextNode("¿Cual es tu género de películas o series favorito?")
 h3Pregunta.appendChild(h3PreguntaContenido)
 
-
 // creamos otra tabla para los "button" td 
 var tableButton = document.createElement("table")
 div.appendChild(tableButton)
-
 
 //
 //ahora creamos el "td" y el "tr"
@@ -245,7 +260,7 @@ labelMiedo.appendChild(contenidoMiedo)
 
 
 
-//Creamos "h3" para preguntar que tipo de peliculas prefieren mas
+//Creamos "h3" para preguntar el idioma
 var h3Pregunta2 = document.createElement("h3")
 div.appendChild(h3Pregunta2)
 var h3PreguntaContenido2 = document.createTextNode("¿Cuando ves una serie o una película en que idioma suele ser?")
@@ -331,18 +346,15 @@ div.appendChild(h3Pregunta3)
 var h3PreguntaContenido3 = document.createTextNode("¿Que dispositivos sueles usar mas a menudo para reproducir películas y series?")
 h3Pregunta3.appendChild(h3PreguntaContenido3)
 
-
-//Creamos otra tabla
+//Creamos otra tabla para los checkbox
 var tableCheckbox = document.createElement("table")
 div.appendChild(tableCheckbox)
 
-
-// creamos un tr y td para el siguiente "radio button"
+// creamos un tr y td para los "checkbox"
 var tdCheckbox = document.createElement("td")
 tableCheckbox.appendChild(tdCheckbox)
 var trCheckbox = document.createElement("tr")
 tdCheckbox.appendChild(trCheckbox)
-
 
 //
 //Crear input y label de "telefono"
@@ -423,8 +435,10 @@ div.appendChild(hr)
 var labelTextarea = document.createElement("label")
 labelTextarea.for = "texto"
 div.appendChild(labelTextarea)
+
 //ponemos un "br" para que el textarea aparezca debajo de la pregunta y no al lado
 div.appendChild(br)
+
 var labelTextareaContenido = document.createTextNode("¿Le añadirías alguna otra funcionalidad a la aplicación?")
 labelTextarea.appendChild(labelTextareaContenido)
 
@@ -434,6 +448,8 @@ textarea.name = "texto"
 textarea.rows = "7"
 textarea.cols = "70"
 div.appendChild(textarea)
+
+
 
 
 
